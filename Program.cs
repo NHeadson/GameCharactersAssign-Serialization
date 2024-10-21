@@ -12,11 +12,32 @@ logger.Info("Program started");
 // deserialize mario json from file into List<Mario>
 string marioFileName = "mario.json";
 List<Mario> marios = [];
-// check if file exists
+// deserialize dk json from file into List<Dk>
+string dkFileName = "dk.json";
+List<Dk> dks = [];
+// deserialize sf2 json from file into List<Sf2>
+string sf2FileName = "sf2.json";
+List<Sf2> sf2s = [];
+
+// check if mario file exists
 if (File.Exists(marioFileName))
 {
   marios = JsonSerializer.Deserialize<List<Mario>>(File.ReadAllText(marioFileName))!;
   logger.Info($"File deserialized {marioFileName}");
+}
+
+// check if dk file exists
+if (File.Exists(dkFileName))
+{
+  dks = JsonSerializer.Deserialize<List<Dk>>(File.ReadAllText(dkFileName))!;
+  logger.Info($"File deserialized {dkFileName}");
+}
+
+// check if sf2 file exists
+if (File.Exists(sf2FileName))
+{
+  sf2s = JsonSerializer.Deserialize<List<Sf2>>(File.ReadAllText(sf2FileName))!;
+  logger.Info($"File deserialized {sf2FileName}");
 }
 
 do

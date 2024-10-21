@@ -4,6 +4,6 @@ public class Dk : Character
   
   public override string Display()
   {
-    return $"Id: {Id}\nName: {Name}\nDescription: {Description}\nAlias: {string.Join(", ", Species)}\n";
+    return $"Id: {Id}\nName: {Name}\nDescription: {Description}\nSpecies: {string.Join(", ", Species)}\n";
   }
 }
