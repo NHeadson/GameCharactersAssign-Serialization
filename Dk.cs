@@ -1,6 +1,6 @@
 public class Dk : Character
 {
-  public List<string> Species { get; set; } = new List<string>();
+  public string? Species { get; set; }
   
   public override string Display()
   {
